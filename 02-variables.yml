@@ -7,7 +7,7 @@
     - name: Print a variable
       vars:
         URL: task.google.com
-        ansible.builtin.debug:
+      ansible.builtin.debug:
         msg: Var URL - {{ URL }}
 
     - name: Print a variable
