@@ -2,14 +2,18 @@
   hosts: localhost
   connection: local
   vars:
-    URL: play.google.com
+    URL: play.google.com.au
   tasks:
     - name: Print a variable
       vars:
-        URL: task.google.com
+        URL: task.google.com.au
       ansible.builtin.debug:
         msg: Var URL - {{ URL }}
 
     - name: Print a variable
       ansible.builtin.debug:
-       msg: "{{ URL }}"
+       msg: Var URL - {{ URL }}
+       msg1: "{{ URL }}"
+
+    ## KEY: "{{ VAR }}" Ansible expects double quotes
+
