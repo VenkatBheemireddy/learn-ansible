@@ -9,11 +9,10 @@
         URL: task.google.com.au
       ansible.builtin.debug:
         msg: Var URL - {{ URL }}
-
     - name: Print a variable
       ansible.builtin.debug:
        msg: Var URL - {{ URL }}
-       msg1: "{{ URL }}"
+     #msg1: "{{ URL }}"
 
     ## KEY: "{{ VAR }}" Ansible expects double quotes
 
