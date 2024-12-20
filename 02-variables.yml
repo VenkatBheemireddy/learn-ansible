@@ -2,15 +2,16 @@
   hosts: localhost
   connection: local
   vars:
-    URL: play.google.com.au
+    URL: play.google.com
+  vars_files:
+    - just-vars.yml
   tasks:
-    - name: Print a variable
+    - name: Task1 Print a variable
       vars:
-        URL: task.google.com.au
+        URL: task.google.com
       ansible.builtin.debug:
         msg: Var URL - {{ URL }}
 
-    - name: Print a variable
+    - name: Task2 Print a variable
       ansible.builtin.debug:
-      #msg: Var URL - {{ URL }}
        msg: "{{ URL }}"
