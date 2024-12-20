@@ -14,5 +14,3 @@
       ansible.builtin.debug:
       #msg: Var URL - {{ URL }}
        msg: "{{ URL }}"
-
-    ## KEY: "{{ VAR }}" Ansible expects double quotes
