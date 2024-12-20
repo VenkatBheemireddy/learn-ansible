@@ -15,3 +15,5 @@
     - name: Task2 Print a variable
       ansible.builtin.debug:
        msg: "{{ URL }}"
+  roles:
+    - sample
