@@ -1,0 +1,13 @@
+- name: output-variable
+  hosts: localhost
+  connection: local
+  vars:
+    URL: play.google.com
+  tasks:
+    - name: Task Output
+      ansible.builtin.shell: ls
+      register: out
+
+    - name: Print Variable
+      ansible.builtin.debug:
+        msg: "{{ out }}"
