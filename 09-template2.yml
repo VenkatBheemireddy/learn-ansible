@@ -1,4 +1,4 @@
-- name: Playbook - Ansible Template
+- name: Playbook - Ansible Copy and Replace Template
   hosts: localhost
   connection: local
 
@@ -8,7 +8,9 @@
     #         src: test.txt
     #         dest: /tmp/test-copy.txt
 
-    - name: Task - Copy Collection
+    - name: Task - Copy and Replace
       ansible.builtin.template:
         src: test.txt
         dest: /tmp/test-copy.txt
+
+### Execute command as, $ansible-playbook -e name=John

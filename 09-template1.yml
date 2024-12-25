@@ -1,0 +1,16 @@
+- name: Playbook - Ansible Only Copy Template
+  hosts: localhost
+  connection: local
+
+  tasks:
+    #     - name: Copy a file
+    #       ansible.builtin.copy:
+    #         src: test.txt
+    #         dest: /tmp/test-copy.txt
+
+    - name: Task - Only Copy
+      ansible.builtin.template:
+        src: test.txt
+        dest: /tmp/test-copy.txt
+
+### Execute command as, $ansible-playbook 09-template1.yml
