@@ -1,0 +1,20 @@
+- name: Playbook [Ansible Loops]
+  hosts: localhost
+  connection: local
+
+  tasks:
+    - name: Print fruits
+      loop:
+        - apple
+        - banana
+        - orange
+      ansible.builtin.debug:
+        msg: Fruit Name - {{ item }}
+
+    - name: Task-2 Print fruit with quantity
+      ansible.builtin.debug:
+        msg: Fruit Name - {{ item.name }}, Quantity - {{ item.quantity }}
+      loop:
+        - { name: apple, quantity: 10 }
+        - { name: banana, quantity: 10 }
+        - { name: orange, quantity: 10 }
