@@ -10,8 +10,8 @@
 
     - name: Task2 - List
       ansible.builtin.shell: ls
-      register: URL
+      register: out
 
     - name: Task3 - Print
       ansible.builtin.debug:
-       msg: command output - {{ URL }}
+       msg: command output - {{ out }}
