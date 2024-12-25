@@ -10,8 +10,8 @@
   ### Execute command as, $ansible-playbook 09-template1.yml
 
   ### The below task will get fail due to {{ name }}
-    - name: Task - template collection
-      ansible.builtin.template:
-        src: test.txt
-        dest: /tmp/test1-copy.txt
+#    - name: Task - template collection
+#      ansible.builtin.template:
+#        src: test.txt
+#        dest: /tmp/test1-copy.txt
 
