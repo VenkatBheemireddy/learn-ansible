@@ -1,12 +1,10 @@
-- name: Playbook [Example for roles variables]
+- name: Playbook [CLI Variables]
   hosts: localhost
   connection: local
   vars:
     URL: play.google.com
-    URL1: example.com
   vars_files:
     - just-vars.yml
-
   tasks:
     - name: Task1 - Variable Defined
       vars:
@@ -18,5 +16,4 @@
       ansible.builtin.debug:
         msg: "{{ URL }}"
 
-  roles:
-    - sample
+# ansible-playbook 02-variables4.yml -e URL=cli.google.com
