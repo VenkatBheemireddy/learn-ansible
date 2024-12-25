@@ -1,0 +1,16 @@
+- name: Playbook Variables
+  hosts: localhost
+  connection: local
+  vars:
+    URL: play.google.com
+
+  tasks:
+    - name: Task1 - Variable Defined
+      vars:
+        URL: task.google.com
+      ansible.builtin.debug:
+        msg: Var URL - {{ URL }}
+
+    - name: Task2 - Variable Not Defined
+      ansible.builtin.debug:
+        msg: "{{ URL }}"
