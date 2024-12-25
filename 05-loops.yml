@@ -1,9 +1,9 @@
-- name: Playbook [Ansible Loops]
+- name: Playbook - Ansible Loops
   hosts: localhost
   connection: local
 
   tasks:
-    - name: Print fruits
+    - name: Task-1 Print fruits
       loop:
         - apple
         - banana
