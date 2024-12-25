@@ -1,3 +1,6 @@
+### Before executing this playbook run the below cmd to create encrypted pwd
+### $ansible-vault encrypt_string Roboshop@1
+
 - name: Playbook - Ansible Vault
   hosts: localhost
   connection: local
@@ -12,4 +15,7 @@
   tasks:
     - name: Task - Password
       ansible.builtin.debug:
-        msg: The password id - {{ PASSWORD }}
+        msg: The password is - {{ PASSWORD }}
+
+### This playbook will throw error when you run as $ansible-playbook 08-vault.yml
+### So, run it as $ansible-playbook --ask-vault-pass 08-vault.yml
