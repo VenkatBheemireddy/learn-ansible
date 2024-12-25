@@ -14,4 +14,4 @@
 
     - name: Task - Print
       ansible.builtin.debug:
-      msg: command output - {{ out }}
+       msg: command output - {{ URL }}
