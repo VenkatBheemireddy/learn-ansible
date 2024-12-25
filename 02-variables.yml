@@ -40,9 +40,9 @@
 # Variable Precedence - If same variable name is declared in multiple, which one will be picked by ANsible.
 # 1. Command line variable.
 # 2. Task variable
-# 3. Play level variable from file
-# 4. Play level Variable
-# 5. Role vars variable
+# 3. Role vars variable
+# 4. Play level variable from file
+# 5. Play level Variable
 # 6. Inventory variables
 # 7. Role default variable
 
