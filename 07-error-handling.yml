@@ -1,6 +1,8 @@
 - name: Playbook - Ansible Error Handling
   hosts: localhost
   connection: local
+  vars:
+    URL: google.com
   tasks:
     - name: Task - Print
       ansible.builtin.shell: cat /etc/passwd | grep DEMO
@@ -8,7 +10,7 @@
 
     - name: Task - List
       ansible.builtin.shell: ls
-      register: out
+      register: URL
 
     - name: Task - Print
       ansible.builtin.debug:
