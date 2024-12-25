@@ -1,0 +1,22 @@
+- name: Playbook [Example for roles variables]
+  hosts: localhost
+  connection: local
+  vars:
+    URL: play.google.com
+    URL1: example.com
+  vars_files:
+    - just-vars.yml
+
+  tasks:
+    - name: Task1 - Variable Defined
+      vars:
+        URL: task.google.com
+      ansible.builtin.debug:
+        msg: Var URL - {{ URL }}
+
+    - name: Task2 - Variable Not Defined
+      ansible.builtin.debug:
+        msg: "{{ URL }}"
+
+  roles:
+    - sample
