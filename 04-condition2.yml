@@ -1,0 +1,17 @@
+- name: Playbook Condition [Passing value from commandline]
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Task - Greater than 10
+      when: VAL |  int > 10
+      ansible.builtin.debug:
+        msg: "{{ VAL }} is greater than 10"
+
+    - name: Task - Less than 10
+      ansible.builtin.debug:
+        msg: "{{ VAL }} is less than 10"
+      when: VAL | int < 10
+
+# In YAML, key position does not matter,
+# That means, when keyword is used after name and as well as end of that task.
+# ansible-playbook 04-condition2.yml -e VAL=11
