@@ -8,8 +8,8 @@
 
     - name: Task - List
       ansible.builtin.shell: ls
-      register: var-ls
+      register: out
 
     - name: Task - Print ls Output
       ansible.builtin.debug:
-      msg: ls command output - {{ var_ls }}
+      msg: ls command output - {{ out }}
