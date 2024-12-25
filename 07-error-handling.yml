@@ -4,14 +4,14 @@
   vars:
     URL: google.com
   tasks:
-    - name: Task - Print
+    - name: Task1 - Print
       ansible.builtin.shell: cat /etc/passwd | grep DEMO
       ignore_errors: true
 
-    - name: Task - List
+    - name: Task2 - List
       ansible.builtin.shell: ls
       register: URL
 
-    - name: Task - Print
+    - name: Task3 - Print
       ansible.builtin.debug:
        msg: command output - {{ URL }}
