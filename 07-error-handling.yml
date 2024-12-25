@@ -10,6 +10,6 @@
       ansible.builtin.shell: ls
       register: out
 
-    - name: Task - Print ls Output
+    - name: Task - Print
       ansible.builtin.debug:
-      msg: ls command output - {{ out }}
+      msg: command output - {{ out }}
