@@ -1,0 +1,10 @@
+- name: Playbook - Ansible Error Handling
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Task - Print
+      ansible.builtin.shell: cat /etc/passwd | grep DEMO
+      ignore_errors: true
+
+    - name: Task - List
+      ansible.builtin.shell: ls
