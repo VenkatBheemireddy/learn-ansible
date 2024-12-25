@@ -11,6 +11,6 @@
     - name: Task - Only Copy
       ansible.builtin.template:
         src: test.txt
-        dest: /tmp/test-copy.txt
+        dest: /tmp/test1-copy.txt
 
 ### Execute command as, $ansible-playbook 09-template1.yml

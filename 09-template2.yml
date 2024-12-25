@@ -11,6 +11,6 @@
     - name: Task - Copy and Replace
       ansible.builtin.template:
         src: test.txt
-        dest: /tmp/test-copy.txt
+        dest: /tmp/test2-copy.txt
 
 ### Execute command as, $ansible-playbook -e name=John
