@@ -2,6 +2,6 @@
   hosts: localhost
   connection: local
   tasks:
-    - name: Print Task
+    - name: Print Task for Vault
       ansible.builtin.debug:
         msg: "Password - {{ lookup('community.hashi_vault.hashi_vault', 'secret=test/data/demo-ssh:password token={{ vault_token }} url=http://vault-internal.azdevopsv82.online:8200') }}"
