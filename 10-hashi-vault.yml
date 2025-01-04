@@ -1,4 +1,4 @@
-- name: Hashicorp vault connect
+- name: Hashicorp vault connect playbook
   hosts: localhost
   connection: local
   tasks:
