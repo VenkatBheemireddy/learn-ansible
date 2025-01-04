@@ -1,4 +1,4 @@
-- name: Hashicorp Vault Connect14
+- name: Hashicorp Vault
   hosts: localhost
   connection: local
   tasks:
